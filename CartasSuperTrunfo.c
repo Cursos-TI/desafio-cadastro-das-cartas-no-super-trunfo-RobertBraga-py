@@ -15,7 +15,9 @@ int main() {
     float area1;
     float pib1;
     int turisticos1;
-
+    float densidade1;
+    float PPC1;
+    
     char estado2;
     char codigo2[3];
     char cidade2[20];
@@ -23,6 +25,8 @@ int main() {
     float area2;
     float pib2;
     int turisticos2;
+    float densidade2;
+    float PPC2;
     // Cadastro das Cartas:
     // Sugestão: Utilize a função scanf para capturar as entradas do usuário para cada atributo.
     // Solicite ao usuário que insira as informações de cada cidade, como o código, nome, população, área, etc.
@@ -47,6 +51,9 @@ int main() {
     printf("Digite a quantidade de pontos turísticos da primeira cidade: ");
     scanf("%d", &turisticos1);
 
+    densidade1 = populacao1 / area1;
+    PPC1 = pib1 / populacao1;
+
     printf("Digite o código do estado da segunda carta: ");
     scanf("%c", &estado2);
 
@@ -68,6 +75,14 @@ int main() {
     printf("Digite a quantidade de pontos turísticos da segunda cidade: ");
     scanf("%d", &turisticos2);
 
+    densidade2 = populacao2 / area2;
+    PPC2 = pib2 / populacao2;
+
+
+  
+
+    
+
     
     // Exibição dos Dados das Cartas:
     // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
@@ -79,7 +94,9 @@ int main() {
     printf("A cidade possui %d habitantes.\n", populacao1);
     printf("A area da cidade é de %.2f km².\n", area1);
     printf("O PIB da cidade é R$%.2f.\n", pib1);
-    printf("A cidade possui %d pontos turísticos.\n\n", turisticos1);
+    printf("A cidade possui %d pontos turísticos.\n", turisticos1);
+    printf("A densidade populacional dessa cidade é %.f\n", densidade1);
+    printf("O PIB per capita dessa cidade é R$%.2f\n\n", PPC1);
     
     printf("O código do segundo estado é %c.\n", estado2);
     printf("O código da cidade é %s.\n", codigo2);
@@ -88,6 +105,8 @@ int main() {
     printf("A area da cidade é de %.2f km².\n", area2);
     printf("O PIB da cidade é R$%.2f.\n", pib2);
     printf("A cidade possui %d pontos turísticos.\n", turisticos2);
+    printf("A densidade populacional dessa cidade é %.f\n", densidade2);
+    printf("O PIB per capita dessa cidade é R$%.2f\n", PPC2);
 
     return 0;
 }
