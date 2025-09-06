@@ -8,25 +8,30 @@
 int main() {
     // Sugestão: Defina variáveis separadas para cada atributo da cidade.
     // Exemplos de atributos: código da cidade, nome, população, área, PIB, número de pontos turísticos.
+
+    //carta 1
     char estado1;
     char codigo1[3];
     char cidade1[20];
-    int populacao1;
+    unsigned long int populacao1;
+    int turisticos1;
     float area1;
     float pib1;
-    int turisticos1;
     float densidade1;
     float PPC1;
-    
+    float superpoder1;
+    //carta 2
     char estado2;
     char codigo2[3];
     char cidade2[20];
-    int populacao2;
+    unsigned long int populacao2;
+    int turisticos2;
     float area2;
     float pib2;
-    int turisticos2;
     float densidade2;
     float PPC2;
+    float superpoder2;
+
     // Cadastro das Cartas:
     // Sugestão: Utilize a função scanf para capturar as entradas do usuário para cada atributo.
     // Solicite ao usuário que insira as informações de cada cidade, como o código, nome, população, área, etc.
@@ -40,7 +45,7 @@ int main() {
     scanf("%s", cidade1);
 
     printf("Digite populaçao da primeira cidade: ");
-    scanf("%d", &populacao1);
+    scanf("%ld", &populacao1);
 
     printf("Digite a área da cidade em km²: ");
     scanf("%f", &area1);
@@ -64,7 +69,7 @@ int main() {
     scanf("%s", cidade2);
 
     printf("Digite a população da segunda cidade: ");
-    scanf("%d", &populacao2);
+    scanf("%ld", &populacao2);
 
     printf("Digite a aréa da segunda cidade em km²: ");
     scanf("%f", &area2);
@@ -78,13 +83,10 @@ int main() {
     densidade2 = populacao2 / area2;
     PPC2 = pib2 / populacao2;
 
-
-  
-
-    
-
-    
-    // Exibição dos Dados das Cartas:
+    superpoder1 = populacao1 + area1 + pib1 + turisticos1 + PPC1 - densidade1;
+    superpoder2 = populacao2 + area2 + pib2 + turisticos2 + PPC2 - densidade2;
+      
+    // Exibição dos Dados das Cartas.
     // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
     // Exiba os valores inseridos para cada atributo da cidade, um por linha.  
         
@@ -107,6 +109,14 @@ int main() {
     printf("A cidade possui %d pontos turísticos.\n", turisticos2);
     printf("A densidade populacional dessa cidade é %.f\n", densidade2);
     printf("O PIB per capita dessa cidade é R$%.2f\n", PPC2);
+
+    printf("População: Carta 1 venceu. %d\n", populacao1 > populacao2);
+    printf("Area: Carta 1 venceu. %d\n", area1 > area2);
+    printf("PIB: Carta 1 venceu. %d\n", pib1 > pib2);
+    printf("Pontos Turísticos: Carta 1 venceu. %d\n", turisticos1 > turisticos2);
+    printf("Densidade populacional: Carta 1 venceu.%d\n", densidade1 < densidade2);
+    printf("PIB per capita: Carta 1 venceu. %d\n", PPC1 > PPC2);
+    printf("Siper Poder: Carta 1 venceu. %d\n", superpoder1 > superpoder2);
 
     return 0;
 }
