@@ -36,7 +36,7 @@ int main() {
     // Sugestão: Utilize a função scanf para capturar as entradas do usuário para cada atributo.
     // Solicite ao usuário que insira as informações de cada cidade, como o código, nome, população, área, etc.
     printf("Digite o código do estado da primeira carta: ");
-    scanf("%c", &estado1);
+    scanf(" %c", &estado1);
 
     printf("Digite o código da primeira cidade: ");
     scanf("%s", codigo1);
@@ -60,7 +60,7 @@ int main() {
     PPC1 = pib1 / populacao1;
 
     printf("Digite o código do estado da segunda carta: ");
-    scanf("%c", &estado2);
+    scanf(" %c", &estado2);
 
     printf("Digite o código da segunda cidade: ");
     scanf("%s", codigo2);
