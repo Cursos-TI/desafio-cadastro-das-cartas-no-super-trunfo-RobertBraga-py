@@ -39,22 +39,22 @@ int main() {
     scanf(" %c", &estado1);
 
     printf("Digite o código da primeira cidade: ");
-    scanf("%s", codigo1);
+    scanf(" %s", codigo1);
 
     printf("Digite o nome da primeira cidade: ");
-    scanf("%s", cidade1);
+    scanf(" %s", cidade1);
 
     printf("Digite populaçao da primeira cidade: ");
-    scanf("%ld", &populacao1);
+    scanf(" %ld", &populacao1);
 
     printf("Digite a área da cidade em km²: ");
-    scanf("%f", &area1);
+    scanf(" %f", &area1);
 
     printf("Digite o PIB da primeira cidade: ");
-    scanf("%f", &pib1);
+    scanf(" %f", &pib1);
 
     printf("Digite a quantidade de pontos turísticos da primeira cidade: ");
-    scanf("%d", &turisticos1);
+    scanf(" %d", &turisticos1);
 
     densidade1 = populacao1 / area1;
     PPC1 = pib1 / populacao1;
@@ -63,22 +63,22 @@ int main() {
     scanf(" %c", &estado2);
 
     printf("Digite o código da segunda cidade: ");
-    scanf("%s", codigo2);
+    scanf(" %s", codigo2);
 
     printf("Digite o nome da segunda cidade: ");
-    scanf("%s", cidade2);
+    scanf(" %s", cidade2);
 
     printf("Digite a população da segunda cidade: ");
-    scanf("%ld", &populacao2);
+    scanf(" %ld", &populacao2);
 
     printf("Digite a aréa da segunda cidade em km²: ");
-    scanf("%f", &area2);
+    scanf(" %f", &area2);
 
     printf("Digite o PIB da segunda cidade: ");
-    scanf("%f", &pib2);
+    scanf(" %f", &pib2);
 
     printf("Digite a quantidade de pontos turísticos da segunda cidade: ");
-    scanf("%d", &turisticos2);
+    scanf(" %d", &turisticos2);
 
     densidade2 = populacao2 / area2;
     PPC2 = pib2 / populacao2;
@@ -116,7 +116,7 @@ int main() {
     printf("Pontos Turísticos: Carta 1 venceu. %d\n", turisticos1 > turisticos2);
     printf("Densidade populacional: Carta 1 venceu.%d\n", densidade1 < densidade2);
     printf("PIB per capita: Carta 1 venceu. %d\n", PPC1 > PPC2);
-    printf("Siper Poder: Carta 1 venceu. %d\n", superpoder1 > superpoder2);
+    printf("Super Poder: Carta 1 venceu. %d\n", superpoder1 > superpoder2);
 
     return 0;
 }
